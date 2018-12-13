@@ -15,13 +15,11 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.0.0",
     "@nuxtjs/pwa": "^2.6.0",
-    "cross-env": "^5.2.0",
-    "nuxt-edge": "^2.4.0-25742701.88668f0",
+    "nuxt-edge": "^2.4.0-25744173.eda33bc",
     "nuxt-purgecss": "^0.0.2"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",
-    "autoprefixer": "^8.6.4",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.10.0",
     "eslint-config-standard": "^12.0.0",
@@ -32,7 +30,6 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^5.0.0",
-    "nodemon": "^1.11.0",
-    "tailwindcss": "~0.6.6"
+    "tailwindcss": "~0.7.2"
   }
 }
