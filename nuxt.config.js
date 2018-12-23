@@ -3,13 +3,6 @@ import { colors } from './tailwind'
 export default {
   mode: 'universal',
 
-  head: {
-    title: 'VueJS Dublin',
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
-  },
-
   /*
   ** Customize the progress-bar color
   */
@@ -28,6 +21,18 @@ export default {
     ['nuxt-purgecss', { mode: 'postcss' }],
     'nuxt-svg-loader'
   ],
+
+  // Meta data
+
+  meta: {
+    name: 'VueJS Dublin Meetup',
+    author: 'VueJS Dublin Team',
+    ogHost: 'https://vuejsdublin.netlify.com/', // TODO: Change after official domain points to the build
+    twitterCard: 'summary',
+    twitterCreator: '@vuejsdublin',
+    twitterSite: '@vuejsdublin'
+    // TODO: Add description
+  },
 
   /*
   ** Build configuration
