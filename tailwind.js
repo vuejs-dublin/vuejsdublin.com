@@ -474,6 +474,7 @@ module.exports = {
     '48': '12rem',
     '64': '16rem',
     'full': '100%',
+    'screen-2/3': '66vh',
     'screen': '100vh'
   },
 
