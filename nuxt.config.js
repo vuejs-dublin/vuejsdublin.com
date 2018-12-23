@@ -25,12 +25,9 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    'nuxt-purgecss'
+    ['nuxt-purgecss', { mode: 'postcss' }],
+    'nuxt-svg-loader'
   ],
-
-  purgeCSS: {
-    mode: 'postcss'
-  },
 
   /*
   ** Build configuration

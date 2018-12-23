@@ -15,13 +15,14 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.0.0",
     "@nuxtjs/pwa": "^2.6.0",
-    "nuxt-edge": "^2.4.0-25744173.eda33bc",
-    "nuxt-purgecss": "^0.0.2"
+    "nuxt-edge": "^2.4.0-25759244.498c4f11",
+    "nuxt-purgecss": "^0.2.0",
+    "nuxt-svg-loader": "^0.1.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.10.0",
+    "eslint": "^5.11.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-import": "^2.14.0",
@@ -30,6 +31,6 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^5.0.0",
-    "tailwindcss": "~0.7.2"
+    "tailwindcss": "~0.7.3"
   }
 }
