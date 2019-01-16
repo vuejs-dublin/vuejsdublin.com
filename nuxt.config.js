@@ -1,18 +1,13 @@
+import path from 'path'
 import { colors } from './tailwind'
 
 export default {
   mode: 'universal',
 
-  /*
-  ** Customize the progress-bar color
-  */
   loading: { color: colors.blue },
 
-  /*
-  ** Global CSS
-  */
   css: [
-    '~/assets/global.pcss'
+    'assets/global'
   ],
 
   modules: [
@@ -40,7 +35,7 @@ export default {
   build: {
     postcss: {
       plugins: {
-        tailwindcss: './tailwind.js'
+        tailwindcss: path.join(__dirname, './tailwind.js')
       }
     },
     extend(config, ctx) {

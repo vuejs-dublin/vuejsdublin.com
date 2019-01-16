@@ -43,6 +43,8 @@ const colors = {
   'green-lighter': '#a2f5bf',
   'green-lightest': '#e3fcec',
 
+  'vue': '#42b883',
+
   'teal-darkest': '#0d3331',
   'teal-darker': '#20504f',
   'teal-dark': '#38a89d',
@@ -210,7 +212,8 @@ module.exports = {
     '2xl': '1.5rem', // 24px
     '3xl': '1.875rem', // 30px
     '4xl': '2.25rem', // 36px
-    '5xl': '3rem' // 48px
+    '5xl': '3rem', // 48px
+    '6xl': '3.8rem'
   },
 
   /*
@@ -854,8 +857,7 @@ module.exports = {
 
   plugins: [
     require('tailwindcss/plugins/container')({
-      // center: true,
-      // padding: '1rem',
+      center: true
     })
   ],
 
