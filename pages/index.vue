@@ -1,6 +1,6 @@
 <template>
-  <div class="flex items-center">
-    <section class="w-1/2 bg-library relative">
+  <div class="flex flex-col md:flex-row items-center">
+    <section class="w-full md:w-1/2 bg-library relative">
       <img align="Dublin City" class="bg-dublin transition-all-1000" src="~assets/bg.jpg">
       <div class="w-full h-full flex items-center justify-center min-h-screen">
         <a
@@ -9,11 +9,11 @@
           rel="noreferrer noopener"
           target="_blank"
         >
-          <Logo class="h-screen-2/3" />
+          <Logo class="max-h-screen-2/3 max-w-full" />
         </a>
       </div>
     </section>
-    <section class="w-1/2">
+    <section class="md:w-1/2 min-h-screen flex items-center justify-center">
       <div class="px-10">
         <h1 class="text-5xl font-normal py-8 mb-8">
           <span class="font-bold text-blue" v-text="'Welcome'" /> to VueJS Dublin.
