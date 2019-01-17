@@ -1,5 +1,5 @@
 <template>
-  <div class="font-sans text-base">
+  <div class="font-sans text-base font-normal bg-grey-lightest">
     <main>
       <Nuxt />
     </main>
