@@ -13,7 +13,7 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    ['nuxt-purgecss', { mode: 'postcss' }],
+    ['nuxt-purgecss', { mode: 'postcss', whitelistPatterns: [/pulse/] }],
     'nuxt-svg-loader'
   ],
 
