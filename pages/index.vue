@@ -67,10 +67,7 @@ export default {
   }
 
   .bg-dublin {
-    @apply
-
-    .absolute .w-full .h-full
-  ;
+    @apply .absolute .w-full .h-full;
     object-fit: cover;
     filter: grayscale(66%);
     transform: scaleX(-1); /* TODO: Just swap the image around */

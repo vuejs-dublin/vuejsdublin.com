@@ -3,10 +3,28 @@
 @tailwind utilities;
 
 .transition-all-1000 {
-    transition: all 1s;
+  transition: all 1s;
 }
 
 
 .transition-all-250 {
-    transition: all .25s;
+  transition: all .25s;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.015, 1.015, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  animation: pulse 1.5s infinite;
 }
