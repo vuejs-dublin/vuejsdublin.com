@@ -2,7 +2,7 @@
   <div class="flex flex-col md:flex-row items-center">
     <section class="w-full md:w-1/2 bg-library relative">
       <img align="Dublin City" class="bg-dublin transition-all-1000" src="~assets/bg.jpg">
-      <div class="w-full h-full flex items-center justify-center min-h-screen">
+      <div class="w-full h-full flex items-center justify-center min-h-screen-1/2 md:min-h-screen">
         <a
           class="mx-auto block flex flex-col items-center justify-center no-underline"
           href="https://www.meetup.com/DublinVueJS/"
@@ -13,7 +13,7 @@
         </a>
       </div>
     </section>
-    <section class="md:w-1/2 min-h-screen flex items-center justify-center">
+    <section class="md:w-1/2 min-h-screen-1/2 md:min-h-screen flex items-center justify-center">
       <div class="px-10">
         <h1 class="text-5xl font-normal py-8 mb-8">
           <span class="font-bold text-blue" v-text="'Welcome'" /> to VueJS Dublin.
