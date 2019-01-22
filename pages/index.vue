@@ -61,7 +61,7 @@ export default {
 </script>
 
 <style scoped>
-   *:hover > .bg-dublin {
+   *:hover > .bg-dublin, *:active > .bg-dublin {
     filter: grayscale(10%);
     transition: all 1s;
   }
