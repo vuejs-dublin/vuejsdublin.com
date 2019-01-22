@@ -61,7 +61,7 @@ export default {
 </script>
 
 <style>
-  .bg-dublin:hover {
+   *:hover > .bg-dublin {
     filter: grayscale(10%);
     transition: all 1s;
   }
