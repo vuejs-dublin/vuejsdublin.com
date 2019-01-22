@@ -9,7 +9,7 @@
           rel="noreferrer noopener"
           target="_blank"
         >
-          <Logo class="max-h-screen-2/3 max-w-full" />
+          <Logo class="max-h-screen-2/3 w-full" />
         </a>
       </div>
     </section>
