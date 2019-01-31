@@ -2,6 +2,8 @@
 
 > The official VueJS Dublin website
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4ada7c6f-e4c5-4f2a-a457-4a54c1d1b24e/deploy-status)](https://app.netlify.com/sites/vuejsdublin/deploys)
+
 ## Build Setup
 
 ``` bash
