@@ -19,20 +19,16 @@
           <span class="font-bold text-blue" v-text="'Welcome'" /> to VueJS Dublin.
         </h1>
         <p class="text-lg md:text-xl font-normal py-6 mb-4 md:my-8">
-          We are VueJS meet up that meets once a month, for more details on the meet-ups
-          you can find more information on our
-          <a
-            class="underline inline-block"
-            href="https://www.meetup.com/DublinVueJS/"
-            rel="noreferrer noopener"
-            target="_blank"
-            v-text="'meetup.com page'"
-          />.
+          Hey you!<br><br>
+          Are you interested in Vue.js and are around Dublin at the moment?<br>
+          Then feel free to join our monthly
+          meetups to participate in conversations, listen to interesting talks about Vue and its ecosystem and gather
+          valuable experiences from other fellow developers in the community.
         </p>
 
         <div class="my-4 md:my-8">
           <h2 class="pb-4">
-            Next Meetup: {{ $options.meetup.name }}
+            Next Meetup: "{{ $options.meetup.name }}"
           </h2>
           <div class="flex items-center pb-2 mb-2 md:my-4">
             <h3>When? </h3>
@@ -104,6 +100,7 @@ export default {
 
   .bg-dublin {
     @apply
+
     .absolute .w-full .h-full
   ;
     object-fit: cover;
