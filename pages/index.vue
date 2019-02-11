@@ -47,7 +47,9 @@
             </address>
           </div>
           <div class="flex items-center pb-2 mb-2 md:my-4">
-            <h3 class="mr-5">What? </h3>
+            <h3 class="mr-5">
+              What?
+            </h3>
             <p v-if="$options.meetup.topics.includes('To be announced')">
               To be announced! Why don't <strong>you</strong> submit a talk?
             </p>
