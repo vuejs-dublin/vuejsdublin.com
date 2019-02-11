@@ -5,6 +5,7 @@
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 250 250"
         class="fixed text-grey-lighter w-16 h-16 fill-current pin-t pin-r"
+        fill-rule="evenodd"
       >
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z" class="text-black" />
         <path
