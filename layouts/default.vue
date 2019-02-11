@@ -2,6 +2,7 @@
   <div class="font-sans text-base font-normal bg-grey-lightest">
     <a class="fixed z-50" href="https://github.com/vuejs-dublin/vuejsdublin.com" target="_blank" rel="noopener">
       <svg
+        xmlns="http://www.w3.org/2000/svg"
         width="80"
         height="80"
         viewBox="0 0 250 250"
