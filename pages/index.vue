@@ -30,6 +30,33 @@
           />.
         </p>
 
+        <div class="my-4 md:my-8">
+          <h2 class="pb-4">
+            Next Meetup: {{ $options.meetup.name }}
+          </h2>
+          <div class="flex items-center pb-2 mb-2 md:my-4">
+            <h3>When? </h3>
+            <time class="ml-4 text-grey-darkest" :datetime="$options.meetup.date.toISOString()">
+              {{ $options.meetup.date.toLocaleString() }}
+            </time>
+          </div>
+          <div class="flex items-center pb-2 mb-2 md:my-4">
+            <h3>Where? </h3>
+            <address class="ml-2 text-grey-darkest font-normal" :datetime="$options.meetup.date.toISOString()">
+              {{ $options.meetup.location }}
+            </address>
+          </div>
+          <div class="flex items-center pb-2 mb-2 md:my-4">
+            <h3 class="mr-5">What? </h3>
+            <p v-if="$options.meetup.topics.includes('To be announced')">
+              To be announced! Why don't <strong>you</strong> submit a talk?
+            </p>
+            <ul v-else>
+              <li v-for="topic in $options.meetup.topics" :key="topic" v-text="topics" />
+            </ul>
+          </div>
+        </div>
+
         <div class="mb-8 md:mb-0">
           <a
             class="inline-block rounded-full px-4 py-2 bg-vue hover:bg-green transition-all-250 shadow-lg hover:shadow-none text-white no-underline text-xl mr-4"
@@ -54,11 +81,16 @@
 
 <script>
 import Logo from '~/assets/logo.svg'
+import meetups from '~/data/meetups.json'
 
 export default {
   components: {
     Logo
-  }
+  },
+  meetup: meetups.map((m) => {
+    m.date = new Date(m.date)
+    return m
+  })[0]
 }
 </script>
 
@@ -70,7 +102,6 @@ export default {
 
   .bg-dublin {
     @apply
-
     .absolute .w-full .h-full
   ;
     object-fit: cover;
