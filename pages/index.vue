@@ -50,7 +50,7 @@
               To be announced! Why don't <strong>you</strong> submit a talk?
             </p>
             <ul v-else>
-              <li v-for="topic in $options.meetup.topics" :key="topic" v-text="topics" />
+              <li v-for="topic in $options.meetup.topics" :key="topic" v-text="topic" />
             </ul>
           </div>
         </div>
