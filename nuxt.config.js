@@ -22,7 +22,7 @@ export default {
   meta: {
     name: 'VueJS Dublin Meetup',
     author: 'VueJS Dublin Team',
-    ogHost: 'https://vuejsdublin.netlify.com/', // TODO: Change after official domain points to the build
+    ogHost: 'https://vuejsdublin.com/',
     twitterCard: 'summary',
     twitterCreator: '@vuejsdublin',
     twitterSite: '@vuejsdublin'
