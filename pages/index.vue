@@ -105,6 +105,5 @@ export default {
   ;
     object-fit: cover;
     filter: grayscale(66%);
-    transform: scaleX(-1); /* TODO: Just swap the image around */
   }
 </style>
