@@ -17,7 +17,8 @@
     "@nuxtjs/pwa": "^2.6.0",
     "nuxt-edge": "^2.4.0-25791846.e594f099",
     "nuxt-purgecss": "^0.2.0",
-    "nuxt-svg-loader": "^1.0.1"
+    "nuxt-svg-loader": "^1.0.1",
+    "postcss-nested": "^4.1.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",
