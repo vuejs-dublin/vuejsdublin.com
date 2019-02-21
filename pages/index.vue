@@ -30,37 +30,35 @@
 
         <div class="my-4 md:my-8">
           <h2 class="pb-4">
-            Next Meetup: "{{ $options.meetup.name }}"
+            Next Meetup: "{{ $options.meetup.title }}"
           </h2>
-          <div class="flex items-center pb-2 mb-2 md:my-4">
+          <div v-if="$options.meetup.date" class="flex items-center pb-2 mb-2 md:my-4">
             <h3>When? </h3>
-            <time class="ml-4 text-grey-darkest" :datetime="$options.meetup.date.toISOString()">
+            <time :datetime="$options.meetup.date.toISOString()" class="ml-4 text-grey-darkest">
               {{ $options.meetup.date.toLocaleString() }}
             </time>
           </div>
           <div class="flex items-center pb-2 mb-2 md:my-4">
-            <h3>Where? </h3>
-            <address class="ml-2 text-grey-darkest font-normal" :datetime="$options.meetup.date.toISOString()">
+            <h3>Where?</h3>
+            <address class="ml-2 text-grey-darkest font-normal">
               {{ $options.meetup.location }}
             </address>
           </div>
-          <div class="flex items-center pb-2 mb-2 md:my-4">
-            <h3 class="mr-5">
-              What?
-            </h3>
-            <p v-if="$options.meetup.topics.includes('To be announced')">
-              To be announced! Why don't <strong>you</strong> submit a talk?
+          <div class="pb-2 mb-2 md:my-6">
+            <!-- eslint-disable-next-line vue/no-v-html -->
+            <div v-if="$options.meetup.descr" class="description" v-html="$options.meetup.descr" />
+            <p v-else>
+              We are still looking for a decent date and location for the next Meetup! Also, speakers are always
+              welcome. <br>
+              PS: Why don't <strong>you</strong> submit a talk?
             </p>
-            <ul v-else>
-              <li v-for="topic in $options.meetup.topics" :key="topic" v-text="topic" />
-            </ul>
           </div>
         </div>
 
         <div class="mb-8 md:mb-0">
           <a
+            :href="$options.meetup.event_url"
             class="inline-block rounded-full px-4 py-2 bg-vue hover:bg-green transition-all-250 shadow-lg hover:shadow-none text-white no-underline text-xl mr-4"
-            href="https://www.meetup.com/DublinVueJS/"
             rel="noreferrer noopener"
             target="_blank"
             v-text="'Join us'"
@@ -82,15 +80,30 @@
 <script>
 import Logo from '~/assets/logo.svg'
 import meetups from '~/data/meetups.json'
+import { parse } from 'date-fns'
+
+const defaultMeetupProperties = {
+  title: 'To be announced',
+  event_url: 'https://www.meetup.com/DublinVueJS/',
+  local_time: false,
+  venue_name: '',
+  descr: ''
+}
+
+// API responds with array sorted in ascending order => first entry is always the "next" meetup
+const nextMeetup = meetups.length ? meetups[0] : {}
+
+const meetup = { ...defaultMeetupProperties, ...nextMeetup }
+meetup.date = meetup.local_time && parse(meetup.local_time)
+meetup.location = meetup.venue_name
+  ? `${meetup.venue_name} - ${meetup.venue_address1}, ${meetup.venue_address2} - ${meetup.venue_city}`
+  : 'To be announced'
 
 export default {
   components: {
     Logo
   },
-  meetup: meetups.map((m) => {
-    m.date = new Date(m.date)
-    return m
-  })[0]
+  meetup
 }
 </script>
 
@@ -107,5 +120,16 @@ export default {
   ;
     object-fit: cover;
     filter: grayscale(66%);
+  }
+</style>
+
+<style>
+  .description {
+    p {
+      @apply
+
+      .my-4
+    ;
+    }
   }
 </style>

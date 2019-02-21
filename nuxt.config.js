@@ -14,7 +14,8 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     ['nuxt-purgecss', { mode: 'postcss', whitelistPatterns: [/pulse/] }],
-    'nuxt-svg-loader'
+    'nuxt-svg-loader',
+    '~/modules/meetup-data'
   ],
 
   // Meta data
@@ -35,7 +36,8 @@ export default {
   build: {
     postcss: {
       plugins: {
-        tailwindcss: path.join(__dirname, './tailwind.js')
+        tailwindcss: path.join(__dirname, './tailwind.js'),
+        'postcss-nested': {}
       }
     },
     extend(config, ctx) {
