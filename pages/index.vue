@@ -30,7 +30,7 @@
 
         <div class="my-4 md:my-8">
           <h2 class="pb-4">
-            Next Meetup: "{{ $options.meetup.title }}"
+            Next Meetup: "{{ $options.meetup.name }}"
           </h2>
           <div v-if="$options.meetup.date" class="flex items-center pb-2 mb-2 md:my-4">
             <h3>When? </h3>
@@ -80,24 +80,30 @@
 <script>
 import Logo from '~/assets/logo.svg'
 import meetups from '~/data/meetups.json'
-import { parse } from 'date-fns'
 
 const defaultMeetupProperties = {
-  title: 'To be announced',
-  event_url: 'https://www.meetup.com/DublinVueJS/',
-  local_time: false,
-  venue_name: '',
-  descr: ''
+  name: 'To be announced',
+  link: 'https://www.meetup.com/DublinVueJS/',
+  time: false,
+  venue: {
+    name: '',
+    address_1: '',
+    city: 'Dublin'
+  },
+  description: '',
+  how_to_find_us: ''
 }
 
 // API responds with array sorted in ascending order => first entry is always the "next" meetup
 const nextMeetup = meetups.length ? meetups[0] : {}
 
 const meetup = { ...defaultMeetupProperties, ...nextMeetup }
-meetup.date = meetup.local_time && parse(meetup.local_time)
-meetup.location = meetup.venue_name
-  ? `${meetup.venue_name} - ${meetup.venue_address1}, ${meetup.venue_address2}, ${meetup.venue_city}`
-  : 'To be announced'
+meetup.date = meetup.time && new Date(meetup.time)
+meetup.location = meetup.how_to_find_us
+  ? meetup.how_to_find_us
+  : meetup.venue.name
+    ? `${meetup.venue.name} - ${meetup.venue.address_1}, ${meetup.venue.city}`
+    : 'To be announced'
 
 export default {
   components: {
