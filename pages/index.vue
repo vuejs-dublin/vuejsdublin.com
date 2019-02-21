@@ -22,7 +22,7 @@
           We'd like to wish you a warm welcome to VueJS Dublin!<br><br>
           VueJS Dublin is a community-focused meetup whose aim is to promote Vue.js and its ecosystem.
           We are always looking for speakers or interesting topics people want to know more about.<br>
-          Our goal is to have regular meetups suited for newcomers, as well as more experienced developers, 
+          Our goal is to have regular meetups suited for newcomers, as well as more experienced developers,
           to learn, talk and share experiences.
           <br><br>
           We look forward to seeing you.
@@ -57,7 +57,7 @@
 
         <div class="mb-8 md:mb-0">
           <a
-            :href="$options.meetup.event_url"
+            :href="$options.meetup.link"
             class="inline-block rounded-full px-4 py-2 bg-vue hover:bg-green transition-all-250 shadow-lg hover:shadow-none text-white no-underline text-xl mr-4"
             rel="noreferrer noopener"
             target="_blank"
