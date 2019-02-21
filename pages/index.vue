@@ -96,7 +96,7 @@ const nextMeetup = meetups.length ? meetups[0] : {}
 const meetup = { ...defaultMeetupProperties, ...nextMeetup }
 meetup.date = meetup.local_time && parse(meetup.local_time)
 meetup.location = meetup.venue_name
-  ? `${meetup.venue_name} - ${meetup.venue_address1}, ${meetup.venue_address2} - ${meetup.venue_city}`
+  ? `${meetup.venue_name} - ${meetup.venue_address1}, ${meetup.venue_address2}, ${meetup.venue_city}`
   : 'To be announced'
 
 export default {
