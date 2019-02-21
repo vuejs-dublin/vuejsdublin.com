@@ -19,11 +19,12 @@
           <span class="font-bold text-blue" v-text="'Welcome'" /> to VueJS Dublin.
         </h1>
         <p class="text-lg md:text-xl font-normal py-6 mb-4 md:my-8">
-          Hey you!<br><br>
-          Are you interested in Vue.js and are around Dublin at the moment?<br>
-          Then feel free to join our monthly
-          meetups to participate in conversations, listen to interesting talks about Vue and its ecosystem and gather
-          valuable experiences from other fellow developers in the community.
+          We'd like to wish you a warm welcome to VueJS Dublin!<br><br>
+          VueJS Dublin is a community focused meetup whos aim is create an awareness of VueJS and its ecosystem.
+          It's an inclusive meetup & we welcome talks and submissions for talks that you think are relevant to Vue.
+          Our goal is to have regular meetups for newbies & more experienced developers to learn, talk and share.<br><br>
+          
+          We look forward to seeing you.
         </p>
 
         <div class="my-4 md:my-8">
