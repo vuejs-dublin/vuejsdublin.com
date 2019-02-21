@@ -46,7 +46,7 @@
           </div>
           <div class="pb-2 mb-2 md:my-6">
             <!-- eslint-disable-next-line vue/no-v-html -->
-            <div v-if="$options.meetup.descr" class="description" v-html="$options.meetup.descr" />
+            <div v-if="$options.meetup.description" class="description" v-html="$options.meetup.description" />
             <p v-else>
               We are still looking for a decent date and location for the next Meetup! Also, speakers are always
               welcome. <br>
