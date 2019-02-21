@@ -20,10 +20,11 @@
         </h1>
         <p class="text-lg md:text-xl font-normal py-6 mb-4 md:my-8">
           We'd like to wish you a warm welcome to VueJS Dublin!<br><br>
-          VueJS Dublin is a community focused meetup whos aim is create an awareness of VueJS and its ecosystem.
-          It's an inclusive meetup & we welcome talks and submissions for talks that you think are relevant to Vue.
-          Our goal is to have regular meetups for newbies & more experienced developers to learn, talk and share.<br><br>
-          
+          VueJS Dublin is a community-focused meetup whose aim is to promote Vue.js and its ecosystem.
+          We are always looking for speakers or interesting topics people want to know more about.<br>
+          Our goal is to have regular meetups suited for newcomers, as well as more experienced developers, 
+          to learn, talk and share experiences.
+          <br><br>
           We look forward to seeing you.
         </p>
 
